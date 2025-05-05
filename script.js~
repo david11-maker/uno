@@ -169,4 +169,3 @@ function checkWin() {
     startGame();
   }
 }
-//sdadas
