@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'SDGlitch';
+  src: url('SDGlitch.ttf') format('truetype');
+}
+
+body {
+  background-image: url(bg.webp);
+  background-size: cover;
+  color: white;
+  font-family: 'SDGlitch', 'Arial';
+  text-align: center;
+  padding: min(1vh, 1vw);
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: min(10vh, 10vw);
+  color: black;
+  text-shadow:
+    min(0.3vh, 0.3vw) min(0.3vh, 0.3vw) min(0.5vh, 0.5vw) white,
+    max(-0.3vh, -0.3vw) max(-0.3vh, -0.3vw) min(0.5vh, 0.5vw) white,
+    min(0.3vh, 0.3vw) max(-0.3vh, -0.3vw) min(0.5vh, 0.5vw) white,
+    max(-0.3vh, -0.3vw) min(0.3vh, 0.3vw) min(0.5vh, 0.5vw) white;
+}
+
+h2 {
+  font-size: min(2.4vh, 2.4vw);
+}
+
+label {
+  font-size: min(2vh, 2vw);
+}
+
+.card {
+  position: absolute;
+  width: min(11.34vh, 11.34vw);
+  height: min(16.2vh, 16.2vw);
+  border-radius: 7.5%;
+  cursor: pointer;
+  border: min(0.7vh, 0.7vw) solid white;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-10%) scale(1.1);
+  z-index: 999;
+}
+
+#topCard {
+  position: static;
+}
+
+.hand {
+  position: relative;
+  height: min(20vh, 20vw);
+  margin: 0 auto min(1vh, 1vw) auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hand .card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hand .card:hover {
+  transform: translateX(-50%) translateY(-10%) scale(1.1);
+  z-index: 999;
+}
+
+.faceDown {
+  background-image: url(cards/CardNotFound.webp);
+  background-size: cover;
+}
+
+.nosel {
+  user-select: none;
+}
+
+#drawButton {
+  padding: min(1vh, 1vw) min(2vh, 2vw);
+  font-family: 'SDGlitch';
+  background-color: black;
+  color: white;
+  font-size: min(1.6vh, 1.6vw);
+  margin-top: min(1vh, 1vw);
+  cursor: pointer;
+}
+
+#showCpuCards {
+  accent-color: black;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  font-size: min(20vh, 20vw);
+  user-select: none;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,100% {opacity: 1;}
+  50% {opacity: 0.3;}
+}
+

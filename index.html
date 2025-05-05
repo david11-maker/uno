@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Not Found</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Card Not Found" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loadingScreen">
+    <span class="loader">LOADING...</span>
+  </div>
+  <div id="mainc" style="display: none;">
+    <h1>CARD NOT FOUND</h1>
+    <div id="game">
+      <h2>BOT'S HAND</h2>
+      <label class="nosel">
+        PRESS P TO REVEAL BOT'S HAND
+      </label>
+      <div id="cpuHand" class="hand"></div>
+
+      <h2>TOP CARD</h2>
+      <div id="topCard" class="card" style="margin: auto;"></div>
+
+      <h2>YOUR HAND</h2>
+      <div id="playerHand" class="hand"></div>
+
+      <button id="drawButton">DRAW</button>
+      <p id="message"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
